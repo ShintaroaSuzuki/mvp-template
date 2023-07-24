@@ -1,0 +1,10 @@
+coverage:
+  paths:
+    - src/coverage.out
+  acceptable: 100%
+  badge:
+    path: docs/coverage.svg
+comment:
+  if: is_pull_request
+push:
+  if: is_default_branch

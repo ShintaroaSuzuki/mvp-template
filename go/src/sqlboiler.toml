@@ -1,0 +1,11 @@
+pkgname="db"
+output="graph/db"
+
+[mysql]
+  dbname="mydb"
+  host="localhost"
+  port=3306
+  user="root"
+  pass="mypassword"
+  sslmode="false"
+  blacklist=["flyway_schema_history"]

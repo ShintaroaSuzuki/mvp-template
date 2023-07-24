@@ -1,0 +1,71 @@
+{
+    "extends": "next/core-web-vitals",
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2022,
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+        "react/prop-types": "off",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "import/no-unresolved": "off",
+        "import/order": [
+            "error",
+            {
+                "alphabetize": {
+                    "order": "asc"
+                }
+            }
+        ],
+        "@typescript-eslint/strict-boolean-expressions": [
+            "error",
+            {
+                "allowString": false,
+                "allowNumber": false,
+                "allowNullableObject": false,
+                "allowNullableBoolean": false,
+                "allowNullableString": false,
+                "allowNullableNumber": false,
+                "allowAny": false
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/restrict-template-expressions": [
+            "error",
+            {
+                "allowNumber": false,
+                "allowBoolean": false,
+                "allowAny": false,
+                "allowNullish": false,
+                "allowRegExp": false
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/ban-types": "error",
+        "max-params": ["error", 3],
+        "id-denylist": ["error", "getServerSideProps"],
+        "@typescript-eslint/no-restricted-imports": [
+            "error",
+            {
+                "paths": [
+                    {
+                        "name": "next",
+                        "message": "Do not use SSR in this project. Use getStaticProps or getStaticPaths instead.",
+                        "importNames": ["GetServerSideProps"]
+                    },
+                    {
+                        "name": "next/image",
+                        "message": "Do not use next/image in this project. Use img instead."
+                    }
+                ]
+            }
+        ],
+        "@next/next/no-img-element": "off"
+    }
+}
