@@ -32,7 +32,7 @@ func main() {
 		DBName:               "mydb",
 		User:                 "testuser",
 		Passwd:               "mypassword",
-		Addr:                 "localhost:3306",
+		Addr:                 "mysql-server:3306",
 		Net:                  "tcp",
 		ParseTime:            true,
 		Collation:            "utf8mb4_unicode_ci",
