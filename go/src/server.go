@@ -29,10 +29,10 @@ func main() {
 	}
 
 	c := mysql.Config{
-		DBName:               "mydb",
-		User:                 "testuser",
-		Passwd:               "mypassword",
-		Addr:                 "mysql-server:3306",
+		DBName:               os.Getenv("MYSQL_DB_NAME"),
+		User:                 os.Getenv("MYSQL_USER"),
+		Passwd:               os.Getenv("MYSQL_PASSWORD"),
+		Addr:                 os.Getenv("MYSQL_HOST"),
 		Net:                  "tcp",
 		ParseTime:            true,
 		Collation:            "utf8mb4_unicode_ci",
