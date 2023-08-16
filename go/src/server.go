@@ -50,7 +50,9 @@ func main() {
 
 	srv := handler.NewDefaultServer(internal.NewExecutableSchema(internal.Config{Resolvers: &graph.Resolver{
 		Srv: service,
-	}}))
+	},
+		Complexity: graph.ComplexityConfig(),
+	}))
 
 	http.Handle("/", playground.Handler("GraphQL playground", "/query"))
 	http.Handle("/query", srv)
