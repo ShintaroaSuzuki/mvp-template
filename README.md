@@ -1,6 +1,7 @@
 # mvp-template
 
 -   [ローカルでの確認環境の構築](#local-exec)
+-   [ChatGPT によるコードレビュー](#ai-review)
 
 <h2 id="local-exec">ローカルでの確認環境の構築</h2>
 
@@ -21,3 +22,11 @@ $ docker compose down
 ```shell
 $ docker compose down --rmi all
 ```
+
+<h2 id="ai-review">ChatGPT によるコードレビュー</h2>
+
+[ai-pr-reviewer](https://github.com/coderabbitai/ai-pr-reviewer) を利用して、PR 作成時に ChatGPT にコードレビューをさせています。
+
+GitHub Secrets に `OPENAI_API_KEY` を登録する必要があります。
+
+(API Keys - OPENAI API)[https://platform.openai.com/account/api-keys] から API キーの発行ができます。
