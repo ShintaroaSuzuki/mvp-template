@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"os"
 	"time"
 
 	"graphql_server/graph/model"
@@ -19,8 +20,8 @@ type Loaders struct {
 
 func NewLoaders(Srv services.Services) *Loaders {
 	redisClient := goredis.NewClient(&goredis.Options{
-		Addr:     "localhost:6379",
-		Password: "mypassword",
+		Addr:     os.Getenv("REDIS_HOST"),
+		Password: os.Getenv("REDIS_PASSWORD"),
 		DB:       0,
 	})
 
