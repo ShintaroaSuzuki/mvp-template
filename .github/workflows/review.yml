@@ -27,6 +27,8 @@ jobs:
           debug: true
           review_simple_changes: true
           review_comment_lgtm: true
+          openai_light_model: gpt-3.5-turbo-0613
+          openai_heavy_model: gpt-3.5-turbo-0613
           system_message: | # PullRequestレビュー用
             - プロンプトを記載
             Important:

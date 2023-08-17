@@ -6,7 +6,6 @@ package graph
 
 import (
 	"context"
-
 	"graphql_server/graph/model"
 	"graphql_server/internal"
 )
@@ -14,6 +13,16 @@ import (
 // User is the resolver for the user field.
 func (r *queryResolver) User(ctx context.Context, id string) (*model.User, error) {
 	return r.Srv.GetUser(ctx, id)
+}
+
+// UsersByID is the resolver for the usersByID field.
+func (r *queryResolver) UsersByID(ctx context.Context, ids []string) ([]*model.User, error) {
+	thunk := r.Loaders.UserLoader.LoadMany(ctx, ids)
+	users, errs := thunk()
+	if len(errs) > 0 {
+		return nil, errs[0]
+	}
+	return users, nil
 }
 
 // Query returns internal.QueryResolver implementation.
