@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+
 	"os"
 	"time"
 
@@ -51,7 +52,7 @@ func (u *userBatcher) BatchGetUsers(ctx context.Context, IDs []string) []*datalo
 
 	var cachedMissIDs map[string]int
 	for i := range IDs {
-		if values[i] == goredis.Nil {
+		if values[i] == nil {
 			if cachedMissIDs == nil {
 				cachedMissIDs = make(map[string]int, len(IDs))
 			}
