@@ -90,5 +90,4 @@ jobs:
             use emojis in the poem, where they are relevant.
 
             IMPORTANT: Provide your release notes in Japanese(日本語).
-          disable_release_notes: true
           language: "JP"
