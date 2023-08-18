@@ -91,3 +91,4 @@ jobs:
 
             IMPORTANT: Provide your release notes in Japanese(日本語).
           disable_release_notes: true
+          language: "JP"
