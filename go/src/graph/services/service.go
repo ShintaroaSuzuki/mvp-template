@@ -13,6 +13,10 @@ type Services interface {
 
 type UserService interface {
 	GetUser(ctx context.Context, id string) (*model.User, error)
+	GetUsers(ctx context.Context, limit int) ([]*model.User, error)
+	CreateUser(ctx context.Context, name string) (*model.User, error)
+	UpdateUser(ctx context.Context, id string, name string) (*model.User, error)
+	DeleteUser(ctx context.Context, id string) (*model.User, error)
 	ListUsersByID(ctx context.Context, IDs []string) ([]*model.User, error)
 }
 

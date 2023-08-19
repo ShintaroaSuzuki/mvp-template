@@ -7,6 +7,7 @@ require (
 	github.com/daixiang0/gci v0.10.1
 	github.com/friendsofgo/errors v0.9.2
 	github.com/go-sql-driver/mysql v1.6.0
+	github.com/google/uuid v1.3.0
 	github.com/graph-gophers/dataloader/v7 v7.1.0
 	github.com/kat-co/vala v0.0.0-20170210184112-42e1d8b61f12
 	github.com/redis/go-redis/v9 v9.0.5

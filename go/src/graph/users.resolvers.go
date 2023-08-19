@@ -6,13 +6,39 @@ package graph
 
 import (
 	"context"
+
 	"graphql_server/graph/model"
 	"graphql_server/internal"
+	"math"
 )
+
+// CreateUser is the resolver for the createUser field.
+func (r *mutationResolver) CreateUser(ctx context.Context, name string) (*model.User, error) {
+	return r.Srv.CreateUser(ctx, name)
+}
+
+// DeleteUser is the resolver for the deleteUser field.
+func (r *mutationResolver) DeleteUser(ctx context.Context, id string) (*model.User, error) {
+	return r.Srv.DeleteUser(ctx, id)
+}
+
+// UpdateUser is the resolver for the updateUser field.
+func (r *mutationResolver) UpdateUser(ctx context.Context, id string, name string) (*model.User, error) {
+	return r.Srv.UpdateUser(ctx, id, name)
+}
 
 // User is the resolver for the user field.
 func (r *queryResolver) User(ctx context.Context, id string) (*model.User, error) {
 	return r.Srv.GetUser(ctx, id)
+}
+
+// Users is the resolver for the users field.
+func (r *queryResolver) Users(ctx context.Context, limit *int) ([]*model.User, error) {
+	if limit == nil {
+		limit = new(int)
+		*limit = math.MaxInt32
+	}
+	return r.Srv.GetUsers(ctx, *limit)
 }
 
 // UsersByID is the resolver for the usersByID field.
@@ -25,7 +51,11 @@ func (r *queryResolver) UsersByID(ctx context.Context, ids []string) ([]*model.U
 	return users, nil
 }
 
+// Mutation returns internal.MutationResolver implementation.
+func (r *Resolver) Mutation() internal.MutationResolver { return &mutationResolver{r} }
+
 // Query returns internal.QueryResolver implementation.
 func (r *Resolver) Query() internal.QueryResolver { return &queryResolver{r} }
 
+type mutationResolver struct{ *Resolver }
 type queryResolver struct{ *Resolver }
