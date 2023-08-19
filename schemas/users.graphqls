@@ -9,5 +9,12 @@ type User {
 
 type Query {
   user(id: String!): User!
+  users(limit: Int): [User!]!
   usersByID(ids: [String!]!): [User!]!
+}
+
+type Mutation {
+  createUser(name: String!): User!
+  deleteUser(id: String!): User!
+  updateUser(id: String!, name: String!): User!
 }
