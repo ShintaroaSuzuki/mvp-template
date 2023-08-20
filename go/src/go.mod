@@ -11,6 +11,7 @@ require (
 	github.com/graph-gophers/dataloader/v7 v7.1.0
 	github.com/kat-co/vala v0.0.0-20170210184112-42e1d8b61f12
 	github.com/redis/go-redis/v9 v9.0.5
+	github.com/rs/cors v1.9.0
 	github.com/spf13/viper v1.12.0
 	github.com/vektah/gqlparser/v2 v2.5.6
 	github.com/volatiletech/randomize v0.0.1
