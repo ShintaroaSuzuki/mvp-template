@@ -1,5 +1,5 @@
-import UserList from "@/app/users/_components/UserList";
 import Link from "next/link";
+import UserList from "@/app/users/_components/UserList";
 
 export default function Users() {
     return (

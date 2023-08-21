@@ -1,5 +1,5 @@
-import UserForm from "@/app/users/_components/UserForm";
 import Link from "next/link";
+import UserForm from "@/app/users/_components/UserForm";
 
 export default function NewUser() {
     return (
