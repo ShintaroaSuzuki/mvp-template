@@ -3,9 +3,11 @@ import UserDetail from "@/app/users/_components/UserDetail";
 
 export default function Page({ params }: { params: { id: string } }) {
     return (
-        <main>
+        <main className="flex flex-col items-center my-20">
             <UserDetail id={params.id} />
-            <Link href="/users">ユーザー一覧に戻る</Link>
+            <Link href="/users">
+                <p className="nav-link mt-8">ユーザー一覧に戻る</p>
+            </Link>
         </main>
     );
 }

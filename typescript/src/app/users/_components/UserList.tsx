@@ -12,14 +12,18 @@ export default function UserList() {
 
     if (data != null) {
         if (data.users.length === 0)
-            return <Link href="/users/new">ユーザーを作成</Link>;
+            return (
+                <Link href="/users/new">
+                    <p>ユーザーを作成しましょう</p>
+                </Link>
+            );
 
         return (
-            <ul>
+            <ul className="w-2/3 max-w-lg flex flex-col gap-y-4">
                 {data.users.map((user) => (
-                    <li className="bg-slate-400" key={user.id}>
+                    <li className="bg-gray-800 rounded-lg" key={user.id}>
                         <Link href={`/users/${user.id}`}>
-                            <p className="h-8">{user.name}</p>
+                            <p className="p-4">{user.name}</p>
                         </Link>
                     </li>
                 ))}

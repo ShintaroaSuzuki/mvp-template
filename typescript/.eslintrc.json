@@ -1,5 +1,5 @@
 {
-    "extends": "next/core-web-vitals",
+    "extends": ["next/core-web-vitals", "plugin:tailwind/recommended"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "project": "./tsconfig.json",
@@ -9,7 +9,12 @@
         "ecmaVersion": 2022,
         "sourceType": "module"
     },
-    "plugins": ["@typescript-eslint"],
+    "plugins": ["@typescript-eslint", "tailwind"],
+    "settings": {
+        "tailwindcss": {
+            "callees": ["cn", "clsx"]
+        }
+    },
     "rules": {
         "react/prop-types": "off",
         "react/jsx-uses-react": "off",
@@ -62,6 +67,14 @@
                     {
                         "name": "next/image",
                         "message": "Do not use next/image in this project. Use img instead."
+                    },
+                    {
+                        "name": "clsx",
+                        "message": "Please use cn from @/utils instead."
+                    },
+                    {
+                        "name": "tailwind-merge",
+                        "message": "Please use cn from @/utils instead."
                     }
                 ]
             }

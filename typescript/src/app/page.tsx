@@ -2,8 +2,10 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <main>
-            <Link href="/users">ユーザー一覧</Link>
+        <main className="flex flex-col items-center justify-center min-h-screen">
+            <Link href="users">
+                <p className="nav-link">ユーザー一覧へ</p>
+            </Link>
         </main>
     );
 }
