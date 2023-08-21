@@ -1,8 +1,5 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
 import AppProvider from "@/app/_providers";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
     children,
@@ -16,7 +13,7 @@ export default function RootLayout({
                     <title>MVP template</title>
                     <meta name="description" content="MVP template" />
                 </head>
-                <body className={inter.className}>{children}</body>
+                <body>{children}</body>
             </html>
         </AppProvider>
     );

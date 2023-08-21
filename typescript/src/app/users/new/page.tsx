@@ -3,10 +3,11 @@ import UserForm from "@/app/users/_components/UserForm";
 
 export default function NewUser() {
     return (
-        <main>
-            <h1>ユーザー作成</h1>
+        <main className="flex flex-col items-center my-20">
             <UserForm />
-            <Link href="/users">ユーザー一覧</Link>
+            <Link href="/users">
+                <p className="nav-link mt-8">ユーザー一覧へ戻る</p>
+            </Link>
         </main>
     );
 }
