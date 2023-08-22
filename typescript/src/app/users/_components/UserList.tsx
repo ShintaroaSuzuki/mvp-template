@@ -19,7 +19,7 @@ export default function UserList() {
             );
 
         return (
-            <ul className="w-2/3 max-w-lg flex flex-col gap-y-4">
+            <ul className="flex flex-col w-2/3 max-w-lg gap-y-4">
                 {data.users.map((user) => (
                     <li className="bg-gray-800 rounded-lg" key={user.id}>
                         <Link href={`/users/${user.id}`}>

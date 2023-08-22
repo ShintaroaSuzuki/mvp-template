@@ -6,7 +6,7 @@ export default function Page({ params }: { params: { id: string } }) {
         <main className="flex flex-col items-center my-20">
             <UserDetail id={params.id} />
             <Link href="/users">
-                <p className="nav-link mt-8">ユーザー一覧に戻る</p>
+                <p className="mt-8 nav-link">ユーザー一覧に戻る</p>
             </Link>
         </main>
     );
