@@ -6,10 +6,10 @@ package graph
 
 import (
 	"context"
+	"math"
 
 	"graphql_server/graph/model"
 	"graphql_server/internal"
-	"math"
 )
 
 // CreateUser is the resolver for the createUser field.

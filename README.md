@@ -2,6 +2,9 @@
 
 -   [ローカルでの確認環境の構築](#local-exec)
 -   [ChatGPT によるコードレビュー](#ai-review)
+-   [direnv のインストール](#install-direnv)
+-   [terraform のインストール](#install-terraform)
+-   [prettier のインストール](#install-prettier)
 
 <h2 id="local-exec">ローカルでの確認環境の構築</h2>
 
@@ -30,3 +33,27 @@ $ docker compose down --rmi all
 GitHub Secrets に `OPENAI_API_KEY` を登録する必要があります。
 
 (API Keys - OPENAI API)[https://platform.openai.com/account/api-keys] から API キーの発行ができます。
+
+<h2 id="install-direnv">direnv のインストール</h2>
+
+<!-- direnv をなぜ使うのか -->
+
+```
+brew install direnv
+```
+
+<h2 id="install-terraform">terraform のインストール</h2>
+
+<!-- terraform をなぜ使うのか -->
+
+```
+brew install terraform
+```
+
+<h2 id="install-prettier">prettier のインストール</h2>
+
+<!-- prettier をなぜ使うのか -->
+
+```
+brew install prettier
+```

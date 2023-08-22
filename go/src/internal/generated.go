@@ -7,7 +7,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"graphql_server/graph/model"
 	"strconv"
 	"sync"
 	"sync/atomic"
@@ -16,6 +15,7 @@ import (
 	"github.com/99designs/gqlgen/graphql/introspection"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
+	"graphql_server/graph/model"
 )
 
 // region    ************************** generated!.gotpl **************************

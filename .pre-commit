@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# common
+prettier . --write --config .prettierrc --ignore-path .prettierignore
+
+# go
+cd go/src
+gofmt -l -w .
+gci write .
+golangci-lint run ./...
+
+# schema
+
+# typescript
+cd ../../typescript
+yarn eslint --fix src
+
+# terraform
+cd ..
+terraform fmt --recursive
