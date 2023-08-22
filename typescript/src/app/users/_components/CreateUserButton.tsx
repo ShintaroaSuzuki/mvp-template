@@ -1,24 +1,24 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation";
-import { ComponentPropsWithoutRef } from "react";
-import { cn } from "@/app/_utils";
+import { useRouter } from 'next/navigation';
+import { ComponentPropsWithoutRef } from 'react';
+import { cn } from '@/app/_utils';
 
 export default function CreateUserButton({
     children,
     ...props
-}: ComponentPropsWithoutRef<"button">) {
+}: ComponentPropsWithoutRef<'button'>) {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push("new");
+        router.push('new');
     };
     return (
         <button
             onClick={handleClick}
             {...props}
             className={cn(
-                "rounded-lg px-10 py-2.5 text-sm hover:font-semibold disabled:hover:font-normal",
+                'rounded-lg px-10 py-2.5 text-sm hover:font-semibold disabled:hover:font-normal',
                 props.className
             )}
         >

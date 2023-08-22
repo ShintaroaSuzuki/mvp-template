@@ -1,22 +1,22 @@
 name: CI/CD (Frontend)
 on:
-  push:
-    branches:
-      - "master"
-      - "staging"
-      - "production"
-    paths:
-      - go
-      - typescript
-      - terraform
-  pull_request:
-    # types:
-    #   - "ready_for_review"
-    branches:
-      - "master"
-      - "staging"
-      - "production"
-    paths:
-      - go
-      - typescript
-      - terraform
+    push:
+        branches:
+            - 'master'
+            - 'staging'
+            - 'production'
+        paths:
+            - go
+            - typescript
+            - terraform
+    pull_request:
+        # types:
+        #   - "ready_for_review"
+        branches:
+            - 'master'
+            - 'staging'
+            - 'production'
+        paths:
+            - go
+            - typescript
+            - terraform

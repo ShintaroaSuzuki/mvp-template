@@ -3,18 +3,18 @@
 # https://gqlgen.com/getting-started/
 
 type User {
-  id: ID!
-  name: String!
+    id: ID!
+    name: String!
 }
 
 type Query {
-  user(id: String!): User!
-  users(limit: Int): [User!]!
-  usersByID(ids: [String!]!): [User!]!
+    user(id: String!): User!
+    users(limit: Int): [User!]!
+    usersByID(ids: [String!]!): [User!]!
 }
 
 type Mutation {
-  createUser(name: String!): User!
-  deleteUser(id: String!): User!
-  updateUser(id: String!, name: String!): User!
+    createUser(name: String!): User!
+    deleteUser(id: String!): User!
+    updateUser(id: String!, name: String!): User!
 }

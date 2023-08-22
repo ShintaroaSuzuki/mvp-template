@@ -1,5 +1,5 @@
-import CreateUserButton from "@/app/users/_components/CreateUserButton";
-import UserList from "@/app/users/_components/UserList";
+import CreateUserButton from '@/app/users/_components/CreateUserButton';
+import UserList from '@/app/users/_components/UserList';
 
 export default function Users() {
     return (

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useGetUsersQuery } from "@/gql/_generated_/graphql";
+import Link from 'next/link';
+import { useGetUsersQuery } from '@/gql/_generated_/graphql';
 
 export default function UserList() {
     const { data, loading, error } = useGetUsersQuery();

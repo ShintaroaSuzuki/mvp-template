@@ -1,5 +1,5 @@
-import Link from "next/link";
-import UserDetail from "@/app/users/_components/UserDetail";
+import Link from 'next/link';
+import UserDetail from '@/app/users/_components/UserDetail';
 
 export default function Page({ params }: { params: { id: string } }) {
     return (
