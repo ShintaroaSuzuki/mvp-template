@@ -3,7 +3,7 @@
 import {
     ApolloClient,
     InMemoryCache,
-    ApolloProvider as _ApolloProvider,
+    ApolloProvider as DefaultApolloProvider,
 } from "@apollo/client";
 import { loadDevMessages, loadErrorMessages } from "@apollo/client/dev";
 
@@ -22,5 +22,9 @@ export default function ApolloProvider({
 }: {
     children: React.ReactNode;
 }) {
-    return <_ApolloProvider client={client}>{children}</_ApolloProvider>;
+    return (
+        <DefaultApolloProvider client={client}>
+            {children}
+        </DefaultApolloProvider>
+    );
 }

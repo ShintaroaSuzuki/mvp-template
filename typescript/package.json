@@ -37,9 +37,12 @@
         "@graphql-codegen/client-preset": "^4.1.0",
         "@graphql-codegen/introspection": "4.0.0",
         "@graphql-codegen/typescript-react-apollo": "^3.3.7",
+        "@markuplint/jsx-parser": "^3.9.0",
+        "@markuplint/react-spec": "^3.10.0",
         "@typescript-eslint/eslint-plugin": "^5.61.0",
         "@typescript-eslint/parser": "^5.61.0",
         "eslint-plugin-tailwind": "^0.2.1",
+        "markuplint": "^3.12.0",
         "serve": "^14.2.0"
     }
 }
