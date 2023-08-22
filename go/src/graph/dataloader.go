@@ -4,15 +4,13 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-
 	"os"
 	"time"
 
-	"graphql_server/graph/model"
-	"graphql_server/graph/services"
-
 	"github.com/graph-gophers/dataloader/v7"
 	goredis "github.com/redis/go-redis/v9"
+	"graphql_server/graph/model"
+	"graphql_server/graph/services"
 )
 
 type Loaders struct {
