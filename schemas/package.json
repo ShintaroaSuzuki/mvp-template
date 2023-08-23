@@ -1,10 +1,10 @@
 {
-  "name": "schemas",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "graphql": "^16.8.0",
-    "graphql-schema-linter": "^3.0.1"
-  }
+    "name": "schemas",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "devDependencies": {
+        "graphql": "^16.8.0",
+        "graphql-schema-linter": "^3.0.1"
+    }
 }
