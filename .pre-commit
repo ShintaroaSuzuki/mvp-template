@@ -9,10 +9,12 @@ gofmt -l -w .
 gci write .
 golangci-lint run ./...
 
-# schema
+# schemas
+cd ../../schemas
+yarn graphql-schema-linter "**/*.graphqls"
 
 # typescript
-cd ../../typescript
+cd ../typescript
 yarn eslint --fix src
 
 # terraform
