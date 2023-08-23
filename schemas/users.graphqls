@@ -1,20 +1,89 @@
-# GraphQL schema example
-#
-# https://gqlgen.com/getting-started/
-
+"""
+ユーザー情報
+"""
 type User {
-    id: ID!
-    name: String!
+  """
+  ユーザーID
+  """
+  id: ID!
+
+  """
+  ユーザー名
+  """
+  name: String!
 }
 
+"""
+クエリ
+"""
 type Query {
-    user(id: String!): User!
-    users(limit: Int): [User!]!
-    usersByID(ids: [String!]!): [User!]!
+  """
+  ID から ユーザー情報を 1 件取得する
+  """
+  user(
+    """
+    ユーザーID
+    """
+    id: String!
+  ): User!
+
+  """
+  ユーザー情報を全件取得する
+  """
+  users(
+    """
+    取得件数
+    """
+    limit: Int
+  ): [User!]!
+
+  """
+  ID から ユーザー情報を複数件取得する
+  """
+  usersByID(
+    """
+    ユーザーID
+    """
+    ids: [String!]!
+  ): [User!]!
 }
 
+"""
+ミューテーション
+"""
 type Mutation {
-    createUser(name: String!): User!
-    deleteUser(id: String!): User!
-    updateUser(id: String!, name: String!): User!
+  """
+  ユーザー情報を作成する
+  """
+  createUser(
+    """
+    ユーザー名
+    """
+    name: String!
+  ): User!
+
+  """
+  ユーザー情報を削除する
+  """
+  deleteUser(
+    """
+    ユーザーID
+    """
+    id: String!
+  ): User!
+
+  """
+  ユーザー情報を更新する
+  """
+  updateUser(
+    """
+    ユーザーID
+    """
+    id: String!
+
+    """
+    ユーザー名
+    """
+    name: String!
+  ): User!
 }

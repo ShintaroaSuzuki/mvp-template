@@ -1,6 +1,0 @@
-query GetUsersByID($ids: [String!]!) {
-    usersByID(ids: $ids) {
-        id
-        name
-    }
-}

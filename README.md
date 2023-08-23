@@ -1,10 +1,10 @@
 # mvp-template
 
--   [ローカルでの確認環境の構築](#local-exec)
--   [ChatGPT によるコードレビュー](#ai-review)
--   [direnv のインストール](#install-direnv)
--   [terraform のインストール](#install-terraform)
--   [prettier のインストール](#install-prettier)
+- [ローカルでの確認環境の構築](#local-exec)
+- [ChatGPT によるコードレビュー](#ai-review)
+- [direnv のインストール](#install-direnv)
+- [terraform のインストール](#install-terraform)
+- [prettier のインストール](#install-prettier)
 
 <h2 id="local-exec">ローカルでの確認環境の構築</h2>
 
@@ -37,6 +37,7 @@ GitHub Secrets に `OPENAI_API_KEY` を登録する必要があります。
 <h2 id="install-direnv">direnv のインストール</h2>
 
 <!-- direnv をなぜ使うのか -->
+<!-- .pre-commit の内容を変更したら再度 `direnv allow` を実行する必要がある -->
 
 ```
 brew install direnv

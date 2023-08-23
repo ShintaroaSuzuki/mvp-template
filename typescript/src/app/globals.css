@@ -1,19 +1,19 @@
 @tailwind base;
 @layer base {
-    body {
-        @apply font-mono bg-black text-white;
-    }
+  body {
+    @apply font-mono bg-black text-white;
+  }
 }
 
 @tailwind components;
 @layer components {
-    .nav-link {
-        @apply underline underline-offset-8 hover:text-gray-400 hover:decoration-gray-400;
-    }
+  .nav-link {
+    @apply underline underline-offset-8 hover:text-gray-400 hover:decoration-gray-400;
+  }
 
-    .validation-error {
-        @apply text-red-500 text-sm h-4;
-    }
+  .validation-error {
+    @apply text-red-500 text-sm h-4;
+  }
 }
 
 @tailwind utilities;

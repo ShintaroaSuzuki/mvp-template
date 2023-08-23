@@ -1,0 +1,6 @@
+query UsersByID($ids: [String!]!) {
+  usersByID(ids: $ids) {
+    id
+    name
+  }
+}
