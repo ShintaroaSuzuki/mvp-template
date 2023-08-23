@@ -1,40 +1,40 @@
 version: '3'
 
 services:
-    mysql-server:
-        container_name: mysql-server
-        build:
-            context: ./db/mysql
-            dockerfile: Dockerfile
-        restart: always
-        ports:
-            - '3306:3306'
-        networks:
-            - local-net
+  mysql-server:
+    container_name: mysql-server
+    build:
+      context: ./db/mysql
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - '3306:3306'
+    networks:
+      - local-net
 
-    redis-server:
-        container_name: redis-server
-        build:
-            context: ./db/redis
-            dockerfile: Dockerfile
-        restart: always
-        ports:
-            - '6379:6379'
-        networks:
-            - local-net
+  redis-server:
+    container_name: redis-server
+    build:
+      context: ./db/redis
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - '6379:6379'
+    networks:
+      - local-net
 
-    graphql-server:
-        container_name: graphql-server
-        build:
-            context: ./go
-            dockerfile: Dockerfile
-        env_file: .env.local
-        restart: always
-        ports:
-            - '8080:8080'
-        networks:
-            - local-net
+  graphql-server:
+    container_name: graphql-server
+    build:
+      context: ./go
+      dockerfile: Dockerfile
+    env_file: .env.local
+    restart: always
+    ports:
+      - '8080:8080'
+    networks:
+      - local-net
 
 networks:
-    local-net:
-        driver: bridge
+  local-net:
+    driver: bridge

@@ -2,8 +2,8 @@
 
 ## 目次
 
--   [gqlgen の導入](#intro-gqlgen)
--   [デバッグ環境の構築](#debug-env)
+- [gqlgen の導入](#intro-gqlgen)
+- [デバッグ環境の構築](#debug-env)
 
 <h2 id="intro-gqlgen">gqlgen の導入</h2>
 

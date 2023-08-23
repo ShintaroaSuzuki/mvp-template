@@ -2,88 +2,88 @@
 ユーザー情報
 """
 type User {
-    """
-    ユーザーID
-    """
-    id: ID!
+  """
+  ユーザーID
+  """
+  id: ID!
 
-    """
-    ユーザー名
-    """
-    name: String!
+  """
+  ユーザー名
+  """
+  name: String!
 }
 
 """
 クエリ
 """
 type Query {
+  """
+  ID から ユーザー情報を 1 件取得する
+  """
+  user(
     """
-    ID から ユーザー情報を 1 件取得する
+    ユーザーID
     """
-    user(
-        """
-        ユーザーID
-        """
-        id: String!
-    ): User!
+    id: String!
+  ): User!
 
+  """
+  ユーザー情報を全件取得する
+  """
+  users(
     """
-    ユーザー情報を全件取得する
+    取得件数
     """
-    users(
-        """
-        取得件数
-        """
-        limit: Int
-    ): [User!]!
+    limit: Int
+  ): [User!]!
 
+  """
+  ID から ユーザー情報を複数件取得する
+  """
+  usersByID(
     """
-    ID から ユーザー情報を複数件取得する
+    ユーザーID
     """
-    usersByID(
-        """
-        ユーザーID
-        """
-        ids: [String!]!
-    ): [User!]!
+    ids: [String!]!
+  ): [User!]!
 }
 
 """
 ミューテーション
 """
 type Mutation {
+  """
+  ユーザー情報を作成する
+  """
+  createUser(
     """
-    ユーザー情報を作成する
+    ユーザー名
     """
-    createUser(
-        """
-        ユーザー名
-        """
-        name: String!
-    ): User!
+    name: String!
+  ): User!
+
+  """
+  ユーザー情報を削除する
+  """
+  deleteUser(
+    """
+    ユーザーID
+    """
+    id: String!
+  ): User!
+
+  """
+  ユーザー情報を更新する
+  """
+  updateUser(
+    """
+    ユーザーID
+    """
+    id: String!
 
     """
-    ユーザー情報を削除する
+    ユーザー名
     """
-    deleteUser(
-        """
-        ユーザーID
-        """
-        id: String!
-    ): User!
-
-    """
-    ユーザー情報を更新する
-    """
-    updateUser(
-        """
-        ユーザーID
-        """
-        id: String!
-
-        """
-        ユーザー名
-        """
-        name: String!
-    ): User!
+    name: String!
+  ): User!
 }

@@ -1,6 +1,6 @@
 query Users($limit: Int) {
-    users(limit: $limit) {
-        id
-        name
-    }
+  users(limit: $limit) {
+    id
+    name
+  }
 }

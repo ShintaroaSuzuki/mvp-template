@@ -1,10 +1,10 @@
 # mvp-template
 
--   [ローカルでの確認環境の構築](#local-exec)
--   [ChatGPT によるコードレビュー](#ai-review)
--   [direnv のインストール](#install-direnv)
--   [terraform のインストール](#install-terraform)
--   [prettier のインストール](#install-prettier)
+- [ローカルでの確認環境の構築](#local-exec)
+- [ChatGPT によるコードレビュー](#ai-review)
+- [direnv のインストール](#install-direnv)
+- [terraform のインストール](#install-terraform)
+- [prettier のインストール](#install-prettier)
 
 <h2 id="local-exec">ローカルでの確認環境の構築</h2>
 
