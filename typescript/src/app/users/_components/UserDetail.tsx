@@ -6,10 +6,10 @@ import { useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import {
-    useGetUserQuery,
+    useUserQuery,
     useUpdateUserMutation,
     useDeleteUserMutation,
-    GetUsersDocument
+    UsersDocument
 } from '@/gql/_generated_/graphql';
 
 const schema = z.object({
@@ -18,7 +18,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export default function UserDetail({ id }: { id: string }) {
-    const { data, loading, error } = useGetUserQuery({
+    const { data, loading, error } = useUserQuery({
         variables: {
             id
         }
@@ -34,7 +34,7 @@ export default function UserDetail({ id }: { id: string }) {
             awaitRefetchQueries: true,
             refetchQueries: [
                 {
-                    query: GetUsersDocument
+                    query: UsersDocument
                 }
             ]
         });

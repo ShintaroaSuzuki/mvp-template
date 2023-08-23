@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import {
     useCreateUserMutation,
-    GetUsersDocument
+    UsersDocument
 } from '@/gql/_generated_/graphql';
 
 const schema = z.object({
@@ -22,7 +22,7 @@ export default function UserForm() {
         awaitRefetchQueries: true,
         refetchQueries: [
             {
-                query: GetUsersDocument
+                query: UsersDocument
             }
         ]
     });

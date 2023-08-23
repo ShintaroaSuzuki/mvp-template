@@ -35,8 +35,8 @@
     "devDependencies": {
         "@graphql-codegen/cli": "5.0.0",
         "@graphql-codegen/client-preset": "^4.1.0",
-        "@graphql-codegen/introspection": "4.0.0",
         "@graphql-codegen/typescript-react-apollo": "^3.3.7",
+        "@graphql-eslint/eslint-plugin": "^3.20.1",
         "@markuplint/jsx-parser": "^3.9.0",
         "@markuplint/react-spec": "^3.10.0",
         "@typescript-eslint/eslint-plugin": "^5.61.0",

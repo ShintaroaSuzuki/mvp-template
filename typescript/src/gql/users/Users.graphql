@@ -1,4 +1,4 @@
-query GetUsers($limit: Int) {
+query Users($limit: Int) {
     users(limit: $limit) {
         id
         name

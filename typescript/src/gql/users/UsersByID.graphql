@@ -1,4 +1,4 @@
-query GetUsersByID($ids: [String!]!) {
+query UsersByID($ids: [String!]!) {
     usersByID(ids: $ids) {
         id
         name

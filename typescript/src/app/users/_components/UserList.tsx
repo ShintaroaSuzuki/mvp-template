@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useGetUsersQuery } from '@/gql/_generated_/graphql';
+import { useUsersQuery } from '@/gql/_generated_/graphql';
 
 export default function UserList() {
-    const { data, loading, error } = useGetUsersQuery();
+    const { data, loading, error } = useUsersQuery();
 
     if (loading) return <p>Loading...</p>;
 
